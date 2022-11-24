@@ -2,6 +2,7 @@ object Modules {
     const val app = ":app"
 
     const val core = ":core"
+    const val coreUi = ":core-ui"
 
     const val onboardingDomain = ":onboarding:onboarding_domain"
     const val onboardingPresentation = ":onboarding:onboarding_presentation"
@@ -13,4 +14,8 @@ object Modules {
     const val searchData = ":search:search_data"
     const val searchDomain = ":search:search_domain"
     const val searchPresentation = ":search:search_presentation"
+
+    const val savedArticlesData = ":saved_articles:saved_articles_data"
+    const val savedArticlesDomain = ":saved_articles:saved_articles_domain"
+    const val savedArticlesPresentation = ":saved_articles:saved_articles_presentation"
 }
