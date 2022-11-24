@@ -14,3 +14,15 @@ dependencyResolutionManagement {
 }
 rootProject.name = "News App"
 include ':app'
+include ':core'
+include ':onboarding'
+include ':onboarding:onboarding_presentation'
+include ':onboarding:onboarding_domain'
+include ':headlines'
+include ':headlines:headlines_data'
+include ':headlines:headlines_domain'
+include ':headlines:headlines_presentation'
+include ':search'
+include ':search:search_data'
+include ':search:search_domain'
+include ':search:search_presentation'
