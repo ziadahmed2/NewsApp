@@ -64,6 +64,7 @@ dependencies {
     kapt(DaggerHilt.hiltCompiler)
 
     implementation(project(Modules.core))
+    implementation(project(Modules.coreUi))
     implementation(project(Modules.onboardingPresentation))
     implementation(project(Modules.onboardingDomain))
     implementation(project(Modules.headlinesPresentation))
@@ -72,6 +73,9 @@ dependencies {
     implementation(project(Modules.searchPresentation))
     implementation(project(Modules.searchDomain))
     implementation(project(Modules.searchData))
+    implementation(project(Modules.savedArticlesDomain))
+    implementation(project(Modules.savedArticlesData))
+    implementation(project(Modules.savedArticlesPresentation))
 
     implementation(AndroidX.coreKtx)
     implementation(AndroidX.appCompat)
