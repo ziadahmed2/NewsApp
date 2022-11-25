@@ -2,8 +2,11 @@ package com.itworx.headlines_data.di
 
 import android.app.Application
 import androidx.room.Room
+import com.itworx.core.domain.preferences.Preferences
 import com.itworx.headlines_data.local.ArticleDatabase
 import com.itworx.headlines_data.remote.NewsApi
+import com.itworx.headlines_data.repo.ArticleRepoImpl
+import com.itworx.headlines_domain.repo.ArticleRepo
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -50,5 +53,15 @@ object HeadlinesDataModule {
             ArticleDatabase::class.java,
             "article_db"
         ).build()
+    }
+
+    @Provides
+    @Singleton
+    fun provideArticleRepo(
+        api: NewsApi,
+        db: ArticleDatabase,
+        preferences: Preferences
+    ): ArticleRepo {
+        return ArticleRepoImpl(dao = db.dao, api = api, preferences = preferences)
     }
 }
