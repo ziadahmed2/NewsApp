@@ -1,5 +1,8 @@
 package com.itworx.headlines_data.di
 
+import android.app.Application
+import androidx.room.Room
+import com.itworx.headlines_data.local.ArticleDatabase
 import com.itworx.headlines_data.remote.NewsApi
 import dagger.Module
 import dagger.Provides
@@ -18,7 +21,7 @@ object HeadlinesDataModule {
 
     @Provides
     @Singleton
-    fun provideOkHttpClient(): OkHttpClient{
+    fun provideOkHttpClient(): OkHttpClient {
         return OkHttpClient.Builder()
             .addInterceptor(
                 HttpLoggingInterceptor().apply {
@@ -37,5 +40,15 @@ object HeadlinesDataModule {
             .client(client)
             .build()
             .create()
+    }
+
+    @Provides
+    @Singleton
+    fun provideArticleDatabase(app: Application): ArticleDatabase {
+        return Room.databaseBuilder(
+            app,
+            ArticleDatabase::class.java,
+            "article_db"
+        ).build()
     }
 }
