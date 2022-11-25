@@ -1,10 +1,11 @@
 package com.itworx.core.domain.preferences
 
+import com.itworx.core.domain.model.Country
 import com.itworx.core.domain.model.UserInfo
 
 
 interface Preferences {
-    fun saveCountry(country: String)
+    fun saveCountry(country: Country)
     fun saveCategories(categories: List<String>)
 
     fun loadUserInfo(): UserInfo

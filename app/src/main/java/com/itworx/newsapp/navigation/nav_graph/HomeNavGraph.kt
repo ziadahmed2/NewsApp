@@ -5,6 +5,7 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import com.itworx.headlines_presentation.headline.HeadlinesScreen
 import com.itworx.newsapp.navigation.Route
 
 @Composable
@@ -17,7 +18,7 @@ fun HomeNavGraph(navController: NavHostController) {
         composable(
             route = Route.HEADLINES
         ) {
-            Text(text = "Headlines")
+            HeadlinesScreen()
         }
         composable(
             route = Route.SAVED_ARTICLES
