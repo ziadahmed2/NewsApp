@@ -13,11 +13,12 @@ import com.itworx.newsapp.navigation.Route.ROOT_GRAPH_ROUTE
 @Composable
 fun SetupNavGraph(
     navController: NavHostController,
-    scaffoldState: ScaffoldState
+    scaffoldState: ScaffoldState,
+    showOnBoarding: Boolean
 ) {
     NavHost(
         navController = navController,
-        startDestination = ONBOARDING_GRAPH_ROUTE,
+        startDestination = if (showOnBoarding) ONBOARDING_GRAPH_ROUTE else Route.HOME,
         route = ROOT_GRAPH_ROUTE
     ) {
         onboardingNavGraph(navController = navController, scaffoldState)

@@ -37,7 +37,7 @@ fun NavGraphBuilder.onboardingNavGraph(
         ) {
             CategoriesScreen(onNextClick = {
                 navController.navigate(Route.HOME) {
-                    popUpTo(Route.CATEGORIES) {
+                    popUpTo(Route.WELCOME) {
                         inclusive = true
                     }
                 }
