@@ -7,9 +7,11 @@ import android.os.Parcelable
 @Parcelize
 data class HeadlinesDto(
     @SerializedName("articles")
-    val articles: List<ArticleDto?>? = listOf(),
+    val articles: List<ArticleDto>? = listOf(),
     @SerializedName("status")
     val status: String? = "",
+    @SerializedName("message")
+    val message: String? = "",
     @SerializedName("totalResults")
     val totalResults: Int? = 0
 ) : Parcelable
