@@ -1,15 +1,18 @@
 package com.itworx.newsapp.navigation.nav_graph
 
-import androidx.compose.material.Text
+import androidx.compose.material.ScaffoldState
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.composable
 import androidx.navigation.navigation
 import com.itworx.newsapp.navigation.Route
+import com.itworx.onboarding_presentation.categories.CategoriesScreen
+import com.itworx.onboarding_presentation.country.CountryScreen
 import com.itworx.onboarding_presentation.welcome.WelcomeScreen
 
 fun NavGraphBuilder.onboardingNavGraph(
-    navController: NavHostController
+    navController: NavHostController,
+    scaffoldState: ScaffoldState
 ) {
     navigation(
         startDestination = Route.WELCOME,
@@ -25,12 +28,20 @@ fun NavGraphBuilder.onboardingNavGraph(
         composable(
             route = Route.COUNTRY
         ) {
-            Text(text = "Country")
+            CountryScreen(
+                onNextClick = { navController.navigate(Route.CATEGORIES) }
+            )
         }
         composable(
             route = Route.CATEGORIES
         ) {
-            Text(text = "Categories")
+            CategoriesScreen(onNextClick = {
+                navController.navigate(Route.HOME) {
+                    popUpTo(Route.CATEGORIES) {
+                        inclusive = true
+                    }
+                }
+            }, scaffoldState = scaffoldState)
         }
     }
 }

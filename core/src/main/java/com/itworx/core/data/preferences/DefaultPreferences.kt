@@ -3,6 +3,7 @@ package com.itworx.core.data.preferences
 import android.content.SharedPreferences
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
+import com.itworx.core.domain.model.Country
 import com.itworx.core.domain.model.UserInfo
 import com.itworx.core.domain.preferences.Preferences
 
@@ -18,9 +19,11 @@ class DefaultPreferences(
             .apply()
     }
 
-    override fun saveCountry(country: String) {
+    override fun saveCountry(country: Country) {
+        val gson = Gson()
+        val json = gson.toJson(country)
         sharedPref.edit()
-            .putString(Preferences.KEY_COUNTRY, country)
+            .putString(Preferences.KEY_COUNTRY, json)
             .apply()
     }
 
@@ -29,7 +32,7 @@ class DefaultPreferences(
         val categories = sharedPref.getString(Preferences.KEY_CATEGORIES, "")
 
         return UserInfo(
-            country = country ?: "",
+            country = countryFromString(country ?: ""),
             categories = listFromString(categories ?: "")
         )
     }
@@ -51,5 +54,10 @@ class DefaultPreferences(
         val gson = Gson()
         val type = object : TypeToken<ArrayList<String>>() {}.type
         return gson.fromJson(list, type)
+    }
+
+    private fun countryFromString(str: String): Country {
+        val gson = Gson()
+        return gson.fromJson(str, Country::class.java)
     }
 }

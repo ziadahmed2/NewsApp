@@ -1,5 +1,6 @@
 package com.itworx.newsapp.navigation.nav_graph
 
+import androidx.compose.material.ScaffoldState
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
@@ -11,14 +12,15 @@ import com.itworx.newsapp.navigation.Route.ROOT_GRAPH_ROUTE
 
 @Composable
 fun SetupNavGraph(
-    navController: NavHostController
+    navController: NavHostController,
+    scaffoldState: ScaffoldState
 ) {
     NavHost(
         navController = navController,
         startDestination = ONBOARDING_GRAPH_ROUTE,
         route = ROOT_GRAPH_ROUTE
     ) {
-        onboardingNavGraph(navController = navController)
+        onboardingNavGraph(navController = navController, scaffoldState)
         composable(route = Route.HOME) {
             HomeScreen()
         }
