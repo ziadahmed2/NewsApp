@@ -50,3 +50,4 @@
     - Deploys an apk to Firebase App distribution for example. [CD]
   - Branch prefixed with version name and /release to trigger the deployment workflow that we setup. ex: [1.0.0/release]
   
+You can download an APK from this link: https://ufile.io/bz20hcxu
