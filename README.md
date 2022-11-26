@@ -2,6 +2,8 @@
 
 - Please insert API_KEY=YOUR_API_KEY into local.properties file.
 
+- Dark mode not fully supported.
+
 - An Android News App using newsapi.org developed with the following choices:
   - Modularization by feature & layer.
   - Kotlin DSL to be able to use kotlin instead of groovy.
