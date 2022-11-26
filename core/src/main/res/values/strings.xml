@@ -1,9 +1,21 @@
 <resources>
     <string name="app_name">News App</string>
-    <string name="welcome_text">Hello! Let\'s find out what is going on :)</string>
+    <string name="welcome_text">Hello! Let\'s find out what is going on in the world today</string>
     <string name="select_fav_country">Please select your favorite Country</string>
     <string name="select_fav_categories">Please select your top 3 favorite Categories</string>
     <string name="lets_go">Let\'s go</string>
     <string name="error_unknown">Unknown error</string>
     <string name="next">Next</string>
+    <string name="connection_error">Couldn\'t reach server. Check your internet connection.</string>
+    <string name="general_error">An unexpected error occurred</string>
+    <string name="no_articles_error">No Articles found</string>
+    <string name="end_of_articles">No more Articles available</string>
+    <string name="empty_query">Search field can\'t be empty</string>
+    <string name="saved_successfully">Article is saved</string>
+    <string name="deleted_successfully">Article deleted</string>
+    <string name="search">Search</string>
+    <string name="latest_news">Latest News</string>
+    <string name="saved_news">Saved Articles</string>
+    <string name="news">News</string>
+    <string name="saved">Saved</string>
 </resources>

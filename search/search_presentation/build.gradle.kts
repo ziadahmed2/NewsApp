@@ -5,7 +5,7 @@ apply {
 dependencies {
     "implementation"(project(Modules.core))
     "implementation"(project(Modules.coreUi))
-    "implementation"(project(Modules.headlinesDomain))
+    "implementation"(project(Modules.searchDomain))
 
     "implementation"(Coil.coilCompose)
 }

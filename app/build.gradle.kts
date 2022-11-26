@@ -47,6 +47,9 @@ android {
             excludes.add("META-INF/licenses/ASM")
         }
     }
+    kotlin.sourceSets.all {
+        languageSettings.optIn("kotlin.RequiresOptIn")
+    }
 }
 
 dependencies {
@@ -88,10 +91,6 @@ dependencies {
     implementation(Retrofit.retrofit)
     implementation(Retrofit.okHttpLoggingInterceptor)
     implementation(Retrofit.gsonConverter)
-
-    kapt(Room.roomCompiler)
-    implementation(Room.roomKtx)
-    implementation(Room.roomRuntime)
 
     testImplementation(Testing.junit4)
     testImplementation(Testing.junitAndroidExt)

@@ -18,23 +18,20 @@ fun NavGraphBuilder.onboardingNavGraph(
         startDestination = Route.WELCOME,
         route = Route.ONBOARDING_GRAPH_ROUTE
     ) {
-        composable(
-            route = Route.WELCOME
-        ) {
+
+        composable(route = Route.WELCOME) {
             WelcomeScreen {
                 navController.navigate(Route.COUNTRY)
             }
         }
-        composable(
-            route = Route.COUNTRY
-        ) {
+
+        composable(route = Route.COUNTRY) {
             CountryScreen(
                 onNextClick = { navController.navigate(Route.CATEGORIES) }
             )
         }
-        composable(
-            route = Route.CATEGORIES
-        ) {
+
+        composable(route = Route.CATEGORIES) {
             CategoriesScreen(onNextClick = {
                 navController.navigate(Route.HOME) {
                     popUpTo(Route.WELCOME) {

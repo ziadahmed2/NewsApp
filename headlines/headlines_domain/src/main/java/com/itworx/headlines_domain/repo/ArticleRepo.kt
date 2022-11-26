@@ -12,4 +12,5 @@ interface ArticleRepo {
     fun getListItems(flow: MutableStateFlow<String>): Flow<PagingData<Article>>
 
     suspend fun insertArticle(article: Article)
+    suspend fun deleteArticle(article: Article)
 }

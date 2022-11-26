@@ -4,14 +4,10 @@ apply {
 
 dependencies {
     "implementation"(project(Modules.core))
-    "implementation"(project(Modules.headlinesDomain))
+    "implementation"(project(Modules.searchDomain))
 
     "implementation"(Retrofit.okHttp)
     "implementation"(Retrofit.retrofit)
     "implementation"(Retrofit.okHttpLoggingInterceptor)
     "implementation"(Retrofit.gsonConverter)
-
-    "kapt"(Room.roomCompiler)
-    "implementation"(Room.roomKtx)
-    "implementation"(Room.roomRuntime)
 }

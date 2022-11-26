@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">News App</string>
+    <string name="welcome_text">اهلا! يلا نشوف ايه الأخبار</string>
+    <string name="select_fav_country">اختر دولتك المفضلة</string>
+    <string name="select_fav_categories">اختار اكتر 3 اقسام مفضلين لك</string>
+    <string name="lets_go">يلا</string>
+    <string name="error_unknown">خطأ غير معروف</string>
+    <string name="next">التالي</string>
+    <string name="connection_error">رجاء تفقد الاتصال ب الانترنت</string>
+    <string name="general_error">خطأ غير متوقع</string>
+    <string name="no_articles_error">لا يوجد اخبار</string>
+    <string name="end_of_articles">لا مزيد من الاخبار</string>
+    <string name="empty_query">لا يمكن ان يكون البحث فاضي</string>
+    <string name="saved_successfully">تم حفظ الخبر</string>
+    <string name="deleted_successfully">تم حذف الخبر</string>
+    <string name="search">بحث</string>
+    <string name="latest_news">اخر الاخبار</string>
+    <string name="saved_news">الاخبار المحفوظة</string>
+    <string name="news">الاخبار</string>
+    <string name="saved">المحفوظ</string>
+</resources>

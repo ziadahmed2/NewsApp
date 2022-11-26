@@ -1,9 +1,7 @@
 package com.itworx.headlines_data.di
 
-import android.app.Application
-import androidx.room.Room
+import com.itworx.core.data.local.ArticleDatabase
 import com.itworx.core.domain.preferences.Preferences
-import com.itworx.headlines_data.local.ArticleDatabase
 import com.itworx.headlines_data.remote.NewsApi
 import com.itworx.headlines_data.repo.ArticleRepoImpl
 import com.itworx.headlines_domain.repo.ArticleRepo
@@ -43,16 +41,6 @@ object HeadlinesDataModule {
             .client(client)
             .build()
             .create()
-    }
-
-    @Provides
-    @Singleton
-    fun provideArticleDatabase(app: Application): ArticleDatabase {
-        return Room.databaseBuilder(
-            app,
-            ArticleDatabase::class.java,
-            "article_db"
-        ).build()
     }
 
     @Provides

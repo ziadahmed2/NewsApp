@@ -22,7 +22,6 @@ import com.itworx.core_ui.Dimensions
 import com.itworx.core_ui.LocalSpacing
 import com.itworx.onboarding_domain.model.CountryListItem
 import com.itworx.onboarding_presentation.components.ActionButton
-import kotlinx.coroutines.flow.collect
 
 @Composable
 fun CountryScreen(

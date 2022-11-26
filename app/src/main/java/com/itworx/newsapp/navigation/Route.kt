@@ -10,6 +10,7 @@ object Route {
 
     const val HOME = "home"
     const val HEADLINES = "headlines"
+    const val WEBVIEW = "webview"
     const val SEARCH = "search"
     const val SAVED_ARTICLES = "saved_articles"
 }
