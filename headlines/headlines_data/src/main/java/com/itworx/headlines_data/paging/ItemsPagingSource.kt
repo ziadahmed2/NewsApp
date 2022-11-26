@@ -1,34 +1,46 @@
 package com.itworx.headlines_data.paging
 
-import androidx.paging.*
+import androidx.paging.PagingSource
+import androidx.paging.PagingState
+import com.itworx.headlines_data.mappers.toDomain
 import com.itworx.headlines_data.remote.NewsApi
-import com.itworx.headlines_data.remote.mappers.toDomain
+import com.itworx.headlines_data.remote.dto.HeadlinesDto
 import com.itworx.headlines_domain.model.Article
-import kotlinx.coroutines.delay
 import okio.IOException
 import retrofit2.HttpException
 import javax.inject.Inject
 
-class PagingSourceCleanImpl @Inject constructor(
+class ItemsPagingSource @Inject constructor(
     private val api: NewsApi,
     private val country: String,
-    private val category: String
+    private val categories: List<String>
 ) : PagingSource<Int, Article>() {
 
     override suspend fun load(params: LoadParams<Int>): LoadResult<Int, Article> {
         val page = params.key ?: FIRST_PAGE_INDEX
+        val headlinesDto = HeadlinesDto()
         return try {
-            delay(500)
 
-            val response = api.getHeadlines(
-                countryCode = country,
-                category = category,
-                pageNumber = page
-            )
+            for (category in categories) {
+                val response = api.getHeadlines(
+                    countryCode = country,
+                    category = category,
+                    pageNumber = page
+                )
+                headlinesDto.articles = headlinesDto.articles?.plus(response.articles ?: listOf())
+                if (response.status != "ok") {
+                    return LoadResult.Error(Throwable(message = response.message))
+                } else {
+                    headlinesDto.status = response.status
+                    headlinesDto.message = response.message
+                }
+            }
 
-            if (response.status == "ok") {
-                val articleList = response.articles
-                val articleListDomain = response.articles?.map { it.toDomain() }
+            if (headlinesDto.status == "ok") {
+                val articleList = headlinesDto.articles
+                val articleListDomain = headlinesDto.articles?.map {
+                    it.toDomain()
+                }?.sortedByDescending { it.date }
 
                 LoadResult.Page(
                     articleListDomain ?: emptyList(),
@@ -37,7 +49,7 @@ class PagingSourceCleanImpl @Inject constructor(
                 )
 
             } else {
-                LoadResult.Error(Throwable(message = response.message))
+                LoadResult.Error(Throwable(message = headlinesDto.message))
             }
         } catch (exception: IOException) {
             return LoadResult.Error(exception)

@@ -8,4 +8,6 @@ dependencies {
     "implementation"(project(Modules.headlinesDomain))
 
     "implementation"(Coil.coilCompose)
+    "implementation"(Paging.pagingCompose)
+    "implementation"(Google.gson)
 }
