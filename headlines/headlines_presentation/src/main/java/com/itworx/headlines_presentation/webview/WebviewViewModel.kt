@@ -3,10 +3,10 @@ package com.itworx.headlines_presentation.webview
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.itworx.core.util.UiEvent
-import com.itworx.core.util.UiText
-import com.itworx.core.R
+import com.itworx.core_domain.util.UiText
 import com.itworx.headlines_domain.model.Article
 import com.itworx.headlines_domain.use_cases.ArticleUsecases
+import com.itworx.core_domain.R
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.receiveAsFlow

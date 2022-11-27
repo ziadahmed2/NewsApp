@@ -15,7 +15,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.hilt.navigation.compose.hiltViewModel
 import coil.annotation.ExperimentalCoilApi
-import com.itworx.core.R
+import com.itworx.core_domain.R
 import com.itworx.core_ui.LocalSpacing
 import com.itworx.search_domain.model.Article
 import com.itworx.search_presentation.components.ArticleRow

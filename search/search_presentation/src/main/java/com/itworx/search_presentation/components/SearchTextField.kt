@@ -26,7 +26,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.unit.dp
-import com.itworx.core.R
+import com.itworx.core_domain.R
 import com.itworx.core_ui.LocalSpacing
 
 @Composable

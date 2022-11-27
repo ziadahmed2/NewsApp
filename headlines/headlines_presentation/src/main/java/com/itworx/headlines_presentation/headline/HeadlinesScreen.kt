@@ -18,7 +18,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.paging.LoadState
 import androidx.paging.compose.LazyPagingItems
 import androidx.paging.compose.collectAsLazyPagingItems
-import com.itworx.core.R
+import com.itworx.core_domain.R
 import com.itworx.core_ui.Dimensions
 import com.itworx.core_ui.LocalSpacing
 import com.itworx.core_ui.presentation.components.TopBar

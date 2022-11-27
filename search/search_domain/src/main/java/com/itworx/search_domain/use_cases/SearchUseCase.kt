@@ -1,6 +1,6 @@
 package com.itworx.search_domain.use_cases
 
-import com.itworx.core.util.Resource
+import com.itworx.core_domain.util.Resource
 import com.itworx.search_domain.model.Article
 import com.itworx.search_domain.repo.ArticleRepo2
 import kotlinx.coroutines.flow.Flow

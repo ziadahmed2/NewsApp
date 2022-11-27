@@ -1,7 +1,7 @@
 package com.itworx.headlines_data.di
 
-import com.itworx.core.data.local.ArticleDatabase
-import com.itworx.core.domain.preferences.Preferences
+import com.itworx.core_data.local.ArticleDatabase
+import com.itworx.core_domain.preferences.Preferences
 import com.itworx.headlines_data.remote.NewsApi
 import com.itworx.headlines_data.repo.ArticleRepoImpl
 import com.itworx.headlines_domain.repo.ArticleRepo

@@ -3,8 +3,8 @@ package com.itworx.headlines_data.repo
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.PagingData
-import com.itworx.core.domain.preferences.Preferences
-import com.itworx.core.data.local.ArticleDao
+import com.itworx.core_data.local.ArticleDao
+import com.itworx.core_domain.preferences.Preferences
 import com.itworx.headlines_data.paging.ItemsPagingSource
 import com.itworx.headlines_data.remote.NewsApi
 import com.itworx.headlines_data.mappers.toEntity

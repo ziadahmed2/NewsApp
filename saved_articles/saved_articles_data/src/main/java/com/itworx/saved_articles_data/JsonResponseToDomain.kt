@@ -1,6 +1,6 @@
 package com.itworx.saved_articles_data
 
-import com.itworx.core.data.local.entity.ArticleEntity
+import com.itworx.core_data.local.entity.ArticleEntity
 import com.itworx.saved_articles_domain.model.Article
 
 

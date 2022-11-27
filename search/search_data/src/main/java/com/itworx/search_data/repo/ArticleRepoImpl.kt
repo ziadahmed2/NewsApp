@@ -1,6 +1,6 @@
 package com.itworx.search_data.repo
 
-import com.itworx.core.util.Resource
+import com.itworx.core_domain.util.Resource
 import com.itworx.search_data.mappers.toDomain
 import com.itworx.search_data.remote.NewsApi
 import com.itworx.search_domain.model.Article
