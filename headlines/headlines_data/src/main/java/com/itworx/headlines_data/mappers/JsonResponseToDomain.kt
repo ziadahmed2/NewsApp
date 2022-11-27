@@ -1,6 +1,6 @@
 package com.itworx.headlines_data.mappers
 
-import com.itworx.core.data.local.entity.ArticleEntity
+import com.itworx.core_data.local.entity.ArticleEntity
 import com.itworx.headlines_data.remote.dto.ArticleDto
 import com.itworx.headlines_domain.model.Article
 import java.time.LocalDateTime

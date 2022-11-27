@@ -1,6 +1,6 @@
 package com.itworx.saved_articles_data.di
 
-import com.itworx.core.data.local.ArticleDatabase
+import com.itworx.core_data.local.ArticleDatabase
 import com.itworx.saved_articles_data.repo.ArticleRepoImpl
 import com.itworx.saved_articles_domain.repo.ArticleRepo
 import dagger.Module

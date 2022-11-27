@@ -39,17 +39,17 @@ fun HomeScreen(navController: NavHostController = rememberNavController()) {
 
     val bottomNavList = listOf(
         BottomNavItem(
-            stringResource(id = com.itworx.core.R.string.news),
+            stringResource(id = com.itworx.core_domain.R.string.news),
             Route.HEADLINES,
             icon = Icons.Default.Home
         ),
         BottomNavItem(
-            stringResource(id = com.itworx.core.R.string.saved),
+            stringResource(id = com.itworx.core_domain.R.string.saved),
             Route.SAVED_ARTICLES,
             icon = Icons.Default.Favorite
         ),
         BottomNavItem(
-            stringResource(id = com.itworx.core.R.string.search),
+            stringResource(id = com.itworx.core_domain.R.string.search),
             Route.SEARCH,
             icon = Icons.Default.Search
         )

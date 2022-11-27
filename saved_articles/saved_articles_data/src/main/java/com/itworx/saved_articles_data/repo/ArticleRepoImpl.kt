@@ -1,6 +1,6 @@
 package com.itworx.saved_articles_data.repo
 
-import com.itworx.core.data.local.ArticleDao
+import com.itworx.core_data.local.ArticleDao
 import com.itworx.saved_articles_data.toArticle
 import com.itworx.saved_articles_domain.model.Article
 import com.itworx.saved_articles_domain.repo.ArticleRepo

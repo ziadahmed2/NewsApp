@@ -3,7 +3,7 @@ package com.itworx.headlines_presentation.headline
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.paging.cachedIn
-import com.itworx.core.domain.preferences.Preferences
+import com.itworx.core_domain.preferences.Preferences
 import com.itworx.headlines_domain.use_cases.GetArticlesUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow

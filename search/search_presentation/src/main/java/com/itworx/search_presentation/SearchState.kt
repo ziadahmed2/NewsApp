@@ -1,6 +1,6 @@
 package com.itworx.search_presentation
 
-import com.itworx.core.util.UiText
+import com.itworx.core_domain.util.UiText
 import com.itworx.search_domain.model.Article
 
 

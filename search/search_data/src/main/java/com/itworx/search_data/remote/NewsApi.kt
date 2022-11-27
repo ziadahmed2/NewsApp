@@ -1,6 +1,6 @@
 package com.itworx.search_data.remote
 
-import com.itworx.core.BuildConfig
+import com.itworx.core_domain.BuildConfig
 import com.itworx.search_data.remote.dto.HeadlinesDto
 import retrofit2.http.GET
 import retrofit2.http.Query

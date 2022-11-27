@@ -3,7 +3,7 @@ apply {
 }
 
 dependencies {
-    "implementation"(project(Modules.core))
+    "implementation"(project(Modules.coreDomain))
     "implementation"(Coroutines.coroutines)
     "implementation"(Coroutines.coroutines)
     "implementation"(Paging.paging)

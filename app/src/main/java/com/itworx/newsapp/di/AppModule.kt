@@ -3,8 +3,8 @@ package com.itworx.newsapp.di
 import android.app.Application
 import android.content.Context.MODE_PRIVATE
 import android.content.SharedPreferences
-import com.itworx.core.data.preferences.DefaultPreferences
-import com.itworx.core.domain.preferences.Preferences
+import com.itworx.core_data.preferences.DefaultPreferences
+import com.itworx.core_domain.preferences.Preferences
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

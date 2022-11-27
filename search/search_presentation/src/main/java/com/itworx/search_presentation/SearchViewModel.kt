@@ -5,8 +5,8 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.itworx.core.util.Resource
-import com.itworx.core.util.getError
+import com.itworx.core_domain.util.Resource
+import com.itworx.core_domain.util.getError
 import com.itworx.search_domain.model.Article
 import com.itworx.search_domain.use_cases.SearchUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel

@@ -13,6 +13,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.itworx.core_domain.R
 import com.itworx.core_ui.LocalSpacing
 import com.itworx.core_ui.presentation.components.TopBar
 import com.itworx.saved_articles_domain.model.Article
@@ -28,7 +29,7 @@ fun SavedArticlesScreen(
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
-        TopBar(title = stringResource(id = com.itworx.core.R.string.saved_news))
+        TopBar(title = stringResource(id = R.string.saved_news))
         ArticleList(
             viewModel.state.articles,
             onClick
@@ -40,7 +41,7 @@ fun SavedArticlesScreen(
 fun ArticleList(articles: List<Article>, onClick: (article: Article) -> Unit) {
     if (articles.isEmpty()) Box(modifier = Modifier.fillMaxSize()) {
         Text(
-            text = stringResource(id = com.itworx.core.R.string.no_articles_error),
+            text = stringResource(id = R.string.no_articles_error),
             modifier = Modifier.align(Alignment.Center)
         )
     }
