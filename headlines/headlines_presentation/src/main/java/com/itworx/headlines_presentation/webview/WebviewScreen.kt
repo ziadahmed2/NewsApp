@@ -10,6 +10,7 @@ import androidx.compose.material.Icon
 import androidx.compose.material.Scaffold
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Favorite
+import androidx.compose.material.icons.filled.FavoriteBorder
 import androidx.compose.material.rememberScaffoldState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -18,25 +19,15 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.hilt.navigation.compose.hiltViewModel
-import com.google.gson.Gson
 import com.itworx.core.util.UiEvent
 import com.itworx.core_ui.LocalSpacing
-import com.itworx.core_domain.model.Article
-import java.net.URLDecoder
-import java.nio.charset.StandardCharsets
 
 @Composable
 fun WebViewScreen(
     viewModel: WebviewViewModel = hiltViewModel(),
-    articleObject: String,
-    addArticle: Boolean
 ) {
     val context = LocalContext.current
     val spacing = LocalSpacing.current
-    val article = Gson().fromJson(
-        URLDecoder.decode(articleObject, StandardCharsets.UTF_8.toString()),
-        Article::class.java
-    )
     val scaffoldState = rememberScaffoldState()
 
     LaunchedEffect(key1 = true) {
@@ -58,7 +49,7 @@ fun WebViewScreen(
                 AndroidView(modifier = Modifier.fillMaxSize(), factory = {
                     WebView(context).apply {
                         webViewClient = WebViewClient()
-                        loadUrl(article.url ?: "")
+                        loadUrl(viewModel.article?.url ?: "")
                     }
                 })
             }
@@ -69,12 +60,15 @@ fun WebViewScreen(
                     .align(Alignment.BottomCenter)
             ) {
                 FloatingActionButton(
-                    onClick = { viewModel.saveArticle(article, addArticle) },
+                    onClick = { viewModel.onFabClicked() },
                     modifier = Modifier
                         .align(Alignment.BottomEnd)
                         .padding(spacing.spaceMedium)
                 ) {
-                    Icon(imageVector = Icons.Default.Favorite, contentDescription = "Save")
+                    Icon(
+                        imageVector = if (viewModel.state.isSaved) Icons.Default.Favorite else Icons.Default.FavoriteBorder,
+                        contentDescription = "Save"
+                    )
                 }
             }
 

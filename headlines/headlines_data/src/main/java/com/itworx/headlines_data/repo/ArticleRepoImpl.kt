@@ -4,11 +4,12 @@ import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.PagingData
 import com.itworx.core_data.local.ArticleDao
+import com.itworx.core_data.mappers.toArticle
 import com.itworx.core_data.mappers.toEntity
+import com.itworx.core_domain.model.Article
 import com.itworx.core_domain.preferences.Preferences
 import com.itworx.headlines_data.paging.ItemsPagingSource
 import com.itworx.headlines_data.remote.NewsApi
-import com.itworx.core_domain.model.Article
 import com.itworx.headlines_domain.repo.ArticleRepo
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
@@ -16,6 +17,7 @@ import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.flatMapLatest
+import kotlinx.coroutines.flow.map
 
 class ArticleRepoImpl(
     private val dao: ArticleDao,
@@ -41,6 +43,14 @@ class ArticleRepoImpl(
                 },
             ).flow
         }
+
+    override fun getSavedArticles(): Flow<List<Article>> {
+        return dao.getAllArticles().map { article ->
+            article.map { articleEntity ->
+                articleEntity.toArticle()
+            }
+        }
+    }
 
     override suspend fun insertArticle(article: Article) {
         dao.upsert(article.toEntity())
