@@ -51,13 +51,8 @@ fun HomeNavGraph(navController: NavHostController) {
             }, navArgument(Constants.PARAM_ADD_ARTICLE) {
                 type = NavType.BoolType
             })
-        ) { navBackStackEntry ->
-            WebViewScreen(
-                articleObject = navBackStackEntry.arguments?.getString(Constants.PARAM_ARTICLE_OBJECT)
-                    ?: "",
-                addArticle = navBackStackEntry.arguments?.getBoolean(Constants.PARAM_ADD_ARTICLE)
-                    ?: true
-            )
+        ) {
+            WebViewScreen()
         }
 
         composable(

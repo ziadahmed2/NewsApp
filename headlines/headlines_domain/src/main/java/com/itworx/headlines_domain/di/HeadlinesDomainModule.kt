@@ -1,10 +1,7 @@
 package com.itworx.headlines_domain.di
 
 import com.itworx.headlines_domain.repo.ArticleRepo
-import com.itworx.headlines_domain.use_cases.ArticleUsecases
-import com.itworx.headlines_domain.use_cases.DeleteArticleUseCase
-import com.itworx.headlines_domain.use_cases.GetArticlesUseCase
-import com.itworx.headlines_domain.use_cases.SaveArticleUseCase
+import com.itworx.headlines_domain.use_cases.*
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -27,10 +24,11 @@ object HeadlinesDomainModule {
     @Provides
     fun provideArticleUseCase(
         repository: ArticleRepo
-    ): ArticleUsecases {
-        return ArticleUsecases(
+    ): ArticleUseCases {
+        return ArticleUseCases(
             saveArticleUseCase = SaveArticleUseCase(repository),
-            deleteArticleUseCase = DeleteArticleUseCase(repository)
+            deleteArticleUseCase = DeleteArticleUseCase(repository),
+            getSavedArticlesUseCase = GetSavedArticlesUseCase(repository)
         )
     }
 }
