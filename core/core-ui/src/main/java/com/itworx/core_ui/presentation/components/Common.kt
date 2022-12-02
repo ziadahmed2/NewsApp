@@ -13,9 +13,8 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import coil.annotation.ExperimentalCoilApi
-import com.itworx.core_ui.R
 import coil.compose.rememberAsyncImagePainter
+import com.itworx.core_ui.R
 
 
 @Composable
@@ -28,7 +27,6 @@ fun WidthSpacer(value: Dp) {
     Spacer(modifier = Modifier.requiredWidth(value))
 }
 
-@OptIn(ExperimentalCoilApi::class)
 @Composable
 fun RemoteImage(
     url: String?,

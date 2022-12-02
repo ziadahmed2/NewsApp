@@ -18,7 +18,7 @@ private val DarkColorPalette = darkColors(
     onBackground = TextWhite,
     surface = LightGray,
     onSurface = TextWhite,
-    onPrimary = Color.White,
+    onPrimary = Color.Black,
     onSecondary = Color.White,
 )
 
@@ -30,12 +30,12 @@ private val LightColorPalette = lightColors(
     onBackground = DarkGray,
     surface = Color.White,
     onSurface = DarkGray,
-    onPrimary = Color.White,
+    onPrimary = Color.Black,
     onSecondary = Color.White,
 )
 
 @Composable
-fun NewsAppTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable() () -> Unit) {
+fun NewsAppTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable () -> Unit) {
     val colors = if (darkTheme) {
         DarkColorPalette
     } else {

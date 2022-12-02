@@ -27,14 +27,16 @@ fun TopBar(title: String, subtitle: String? = null) {
     Text(
         text = title,
         style = MaterialTheme.typography.h2,
-        modifier = Modifier.padding(top = spacing.spaceMedium)
+        modifier = Modifier.padding(top = spacing.spaceMedium),
+        color = MaterialTheme.colors.onPrimary
     )
 
     if (!subtitle.isNullOrEmpty()){
         Text(
             text = LocalDate.now().toString(),
             style = MaterialTheme.typography.h5,
-            modifier = Modifier.padding(bottom = spacing.spaceSmall)
+            modifier = Modifier.padding(bottom = spacing.spaceSmall),
+            color = MaterialTheme.colors.onPrimary
         )
     }
 

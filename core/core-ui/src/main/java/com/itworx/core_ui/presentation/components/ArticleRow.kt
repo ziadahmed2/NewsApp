@@ -41,7 +41,8 @@ fun ArticleRow(
                 if (!article.source.isNullOrEmpty()) {
                     Text(
                         text = article.source ?: "",
-                        style = MaterialTheme.typography.body1
+                        style = MaterialTheme.typography.body1,
+                        color = MaterialTheme.colors.onPrimary
                     )
                     HeightSpacer(value = spacing.spaceSmall)
                 }
@@ -49,12 +50,14 @@ fun ArticleRow(
                     text = article.title ?: "",
                     style = MaterialTheme.typography.body1,
                     maxLines = 3,
-                    overflow = TextOverflow.Ellipsis
+                    overflow = TextOverflow.Ellipsis,
+                    color = MaterialTheme.colors.onPrimary
                 )
                 HeightSpacer(value = spacing.spaceSmall)
                 Text(
                     text = article.date ?: "",
-                    style = MaterialTheme.typography.body1
+                    style = MaterialTheme.typography.body1,
+                    color = MaterialTheme.colors.onPrimary
                 )
             }
         }
