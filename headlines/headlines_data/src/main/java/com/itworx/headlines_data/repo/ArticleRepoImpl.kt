@@ -10,6 +10,8 @@ import com.itworx.headlines_data.paging.ItemsPagingSource
 import com.itworx.headlines_data.remote.NewsApi
 import com.itworx.core_domain.model.Article
 import com.itworx.headlines_domain.repo.ArticleRepo
+import kotlinx.coroutines.CoroutineDispatcher
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -18,6 +20,7 @@ import kotlinx.coroutines.flow.flatMapLatest
 class ArticleRepoImpl(
     private val dao: ArticleDao,
     private val api: NewsApi,
+    private val dispatcher: CoroutineDispatcher = Dispatchers.IO,
     preferences: Preferences
 ) : ArticleRepo {
 
@@ -32,7 +35,8 @@ class ArticleRepoImpl(
                     ItemsPagingSource(
                         api,
                         pref.country.code,
-                        pref.categories
+                        pref.categories,
+                        dispatcher = dispatcher
                     )
                 },
             ).flow
