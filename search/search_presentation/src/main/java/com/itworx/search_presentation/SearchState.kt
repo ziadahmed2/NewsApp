@@ -1,7 +1,7 @@
 package com.itworx.search_presentation
 
+import com.itworx.core_domain.model.Article
 import com.itworx.core_domain.util.UiText
-import com.itworx.search_domain.model.Article
 
 
 data class SearchState(

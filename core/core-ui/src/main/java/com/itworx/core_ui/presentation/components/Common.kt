@@ -1,4 +1,4 @@
-package com.itworx.saved_articles_presentation.components
+package com.itworx.core_ui.presentation.components
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*

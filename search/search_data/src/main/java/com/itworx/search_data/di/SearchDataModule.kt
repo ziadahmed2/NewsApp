@@ -2,7 +2,7 @@ package com.itworx.search_data.di
 
 import com.itworx.search_data.remote.NewsApi
 import com.itworx.search_data.repo.ArticleRepoImpl
-import com.itworx.search_domain.repo.ArticleRepo2
+import com.itworx.search_domain.repo.ArticleRepo
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -32,7 +32,7 @@ object SearchDataModule {
     @Singleton
     fun provideArticleRepo(
         api: NewsApi
-    ): ArticleRepo2 {
+    ): ArticleRepo {
         return ArticleRepoImpl(api = api)
     }
 }

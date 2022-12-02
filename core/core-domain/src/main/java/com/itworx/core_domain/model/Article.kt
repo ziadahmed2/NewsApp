@@ -1,4 +1,4 @@
-package com.itworx.headlines_domain.model
+package com.itworx.core_domain.model
 
 data class Article(
     val description: String? = "",

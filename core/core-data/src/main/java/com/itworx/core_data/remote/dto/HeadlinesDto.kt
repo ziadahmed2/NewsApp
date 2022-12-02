@@ -1,9 +1,8 @@
-package com.itworx.search_data.remote.dto
+package com.itworx.core_data.remote.dto
 
 import com.google.gson.annotations.SerializedName
 import kotlinx.parcelize.Parcelize
 import android.os.Parcelable
-import com.itworx.search_data.remote.dto.ArticleDto
 
 @Parcelize
 data class HeadlinesDto(

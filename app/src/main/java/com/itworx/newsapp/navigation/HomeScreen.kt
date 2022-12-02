@@ -29,7 +29,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-import com.itworx.core_ui.domain.model.BottomNavItem
+import com.itworx.core_domain.model.BottomNavItem
 import com.itworx.headlines_presentation.utils.Constants
 import com.itworx.newsapp.R
 import com.itworx.newsapp.navigation.nav_graph.HomeNavGraph

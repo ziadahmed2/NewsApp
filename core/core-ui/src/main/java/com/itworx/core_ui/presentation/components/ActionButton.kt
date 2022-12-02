@@ -1,4 +1,4 @@
-package com.itworx.onboarding_presentation.components
+package com.itworx.core_ui.presentation.components
 
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape

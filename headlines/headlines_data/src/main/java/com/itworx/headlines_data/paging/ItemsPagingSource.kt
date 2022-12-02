@@ -2,10 +2,10 @@ package com.itworx.headlines_data.paging
 
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
-import com.itworx.headlines_data.mappers.toDomain
+import com.itworx.core_data.mappers.toDomain
+import com.itworx.core_data.remote.dto.HeadlinesDto
 import com.itworx.headlines_data.remote.NewsApi
-import com.itworx.headlines_data.remote.dto.HeadlinesDto
-import com.itworx.headlines_domain.model.Article
+import com.itworx.core_domain.model.Article
 import okio.IOException
 import retrofit2.HttpException
 import javax.inject.Inject

@@ -1,7 +1,7 @@
 package com.itworx.headlines_data.remote
 
+import com.itworx.core_data.remote.dto.HeadlinesDto
 import com.itworx.headlines_data.BuildConfig
-import com.itworx.headlines_data.remote.dto.HeadlinesDto
 import retrofit2.http.GET
 import retrofit2.http.Query
 

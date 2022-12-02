@@ -1,6 +1,6 @@
 package com.itworx.search_domain.di
 
-import com.itworx.search_domain.repo.ArticleRepo2
+import com.itworx.search_domain.repo.ArticleRepo
 import com.itworx.search_domain.use_cases.SearchUseCase
 import dagger.Module
 import dagger.Provides
@@ -15,7 +15,7 @@ object SearchDomainModule {
     @ViewModelScoped
     @Provides
     fun provideSearchUseCase(
-        repository: ArticleRepo2
+        repository: ArticleRepo
     ): SearchUseCase {
         return SearchUseCase(
             articleRepo = repository

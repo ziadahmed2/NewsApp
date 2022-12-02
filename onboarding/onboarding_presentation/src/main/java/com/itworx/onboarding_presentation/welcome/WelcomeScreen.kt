@@ -9,7 +9,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import com.itworx.core_ui.LocalSpacing
-import com.itworx.onboarding_presentation.components.ActionButton
+import com.itworx.core_ui.presentation.components.ActionButton
 import com.itworx.core_domain.R
 
 @Composable

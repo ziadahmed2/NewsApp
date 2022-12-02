@@ -1,10 +1,10 @@
 package com.itworx.search_domain.repo
 
+import com.itworx.core_domain.model.Article
 import com.itworx.core_domain.util.Resource
-import com.itworx.search_domain.model.Article
 import kotlinx.coroutines.flow.Flow
 
-interface ArticleRepo2 {
+interface ArticleRepo {
 
-    suspend fun getListItems(query: String): Flow<Resource<List<Article>>>
+    suspend fun getSearchResults(query: String): Flow<Resource<List<Article>>>
 }

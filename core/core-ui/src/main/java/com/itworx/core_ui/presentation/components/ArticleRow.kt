@@ -1,4 +1,4 @@
-package com.itworx.search_presentation.components
+package com.itworx.core_ui.presentation.components
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
@@ -13,8 +13,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import com.itworx.core_domain.model.Article
 import com.itworx.core_ui.LocalSpacing
-import com.itworx.search_domain.model.Article
 
 @Composable
 fun ArticleRow(
