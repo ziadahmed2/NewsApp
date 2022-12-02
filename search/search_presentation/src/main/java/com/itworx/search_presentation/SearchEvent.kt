@@ -1,6 +1,6 @@
 package com.itworx.search_presentation
 
-import com.itworx.search_domain.model.Article
+import com.itworx.core_domain.model.Article
 
 
 sealed class SearchEvent {

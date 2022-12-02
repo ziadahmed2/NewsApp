@@ -4,7 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.itworx.core.util.UiEvent
 import com.itworx.core_domain.util.UiText
-import com.itworx.headlines_domain.model.Article
+import com.itworx.core_domain.model.Article
 import com.itworx.headlines_domain.use_cases.ArticleUsecases
 import com.itworx.core_domain.R
 import dagger.hilt.android.lifecycle.HiltViewModel

@@ -3,7 +3,10 @@ package com.itworx.headlines_presentation.headline
 import androidx.compose.animation.animateContentSize
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.ExperimentalFoundationApi
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.CircularProgressIndicator
 import androidx.compose.material.Text
@@ -19,11 +22,11 @@ import androidx.paging.LoadState
 import androidx.paging.compose.LazyPagingItems
 import androidx.paging.compose.collectAsLazyPagingItems
 import com.itworx.core_domain.R
+import com.itworx.core_domain.model.Article
 import com.itworx.core_ui.Dimensions
 import com.itworx.core_ui.LocalSpacing
+import com.itworx.core_ui.presentation.components.ArticleRow
 import com.itworx.core_ui.presentation.components.TopBar
-import com.itworx.headlines_domain.model.Article
-import com.itworx.headlines_presentation.components.ArticleRow
 import okio.IOException
 import java.time.LocalDate
 
@@ -37,7 +40,10 @@ fun HeadlinesScreen(
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
-        TopBar(title = stringResource(id = R.string.latest_news), subtitle = LocalDate.now().toString())
+        TopBar(
+            title = stringResource(id = R.string.latest_news),
+            subtitle = LocalDate.now().toString()
+        )
         ArticleList(
             allArticles.loadState.refresh,
             allArticles,
@@ -63,8 +69,7 @@ fun ArticleList(
                         article = articles[i] ?: Article(),
                         onClick = {
                             onClick(articles[i] ?: Article())
-                        },
-                        spacing = spacing
+                        }
                     )
                 }
                 when (articles.loadState.append) {

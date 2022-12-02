@@ -36,9 +36,14 @@ class MainActivity : ComponentActivity() {
                             modifier = Modifier.fillMaxSize(),
                             painter = painterResource(id = R.drawable.background),
                             contentScale = ContentScale.Crop,
-                            contentDescription = null)
+                            contentDescription = null
+                        )
 
-                        SetupNavGraph(navController = navController, scaffoldState, showOnBoarding = preferences.loadShouldShowOnboarding())
+                        SetupNavGraph(
+                            navController = navController,
+                            scaffoldState,
+                            showOnBoarding = preferences.loadShouldShowOnboarding()
+                        )
                     }
                 }
             }

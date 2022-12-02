@@ -1,4 +1,4 @@
-package com.itworx.core_ui.domain.model
+package com.itworx.core_domain.model
 
 import androidx.compose.ui.graphics.vector.ImageVector
 

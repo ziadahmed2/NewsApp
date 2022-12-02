@@ -21,7 +21,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import com.google.gson.Gson
 import com.itworx.core.util.UiEvent
 import com.itworx.core_ui.LocalSpacing
-import com.itworx.headlines_domain.model.Article
+import com.itworx.core_domain.model.Article
 import java.net.URLDecoder
 import java.nio.charset.StandardCharsets
 

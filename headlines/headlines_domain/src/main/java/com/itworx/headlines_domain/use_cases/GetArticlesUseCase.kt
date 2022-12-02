@@ -1,7 +1,7 @@
 package com.itworx.headlines_domain.use_cases
 
 import androidx.paging.PagingData
-import com.itworx.headlines_domain.model.Article
+import com.itworx.core_domain.model.Article
 import com.itworx.headlines_domain.repo.ArticleRepo
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow

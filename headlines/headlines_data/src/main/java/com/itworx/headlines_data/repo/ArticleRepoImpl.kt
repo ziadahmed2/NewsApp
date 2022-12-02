@@ -4,11 +4,11 @@ import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.PagingData
 import com.itworx.core_data.local.ArticleDao
+import com.itworx.core_data.mappers.toEntity
 import com.itworx.core_domain.preferences.Preferences
 import com.itworx.headlines_data.paging.ItemsPagingSource
 import com.itworx.headlines_data.remote.NewsApi
-import com.itworx.headlines_data.mappers.toEntity
-import com.itworx.headlines_domain.model.Article
+import com.itworx.core_domain.model.Article
 import com.itworx.headlines_domain.repo.ArticleRepo
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.Flow

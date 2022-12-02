@@ -1,10 +1,10 @@
 package com.itworx.search_data.repo
 
+import com.itworx.core_domain.model.Article
 import com.itworx.core_domain.util.Resource
-import com.itworx.search_data.mappers.toDomain
+import com.itworx.core_data.mappers.toDomain
 import com.itworx.search_data.remote.NewsApi
-import com.itworx.search_domain.model.Article
-import com.itworx.search_domain.repo.ArticleRepo2
+import com.itworx.search_domain.repo.ArticleRepo
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import retrofit2.HttpException
@@ -12,10 +12,10 @@ import java.io.IOException
 
 class ArticleRepoImpl(
     private val api: NewsApi
-) : ArticleRepo2 {
+) : ArticleRepo {
 
 
-    override suspend fun getListItems(query: String): Flow<Resource<List<Article>>> {
+    override suspend fun getSearchResults(query: String): Flow<Resource<List<Article>>> {
         return flow<Resource<List<Article>>> {
             emit(Resource.Loading(true))
             val response = try {
