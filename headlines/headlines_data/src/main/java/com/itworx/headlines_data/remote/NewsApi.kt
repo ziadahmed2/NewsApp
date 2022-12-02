@@ -21,5 +21,6 @@ interface NewsApi {
 
     companion object {
         const val BASE_URL = "https://newsapi.org/"
+        const val SUCCESS_KEYWORD = "ok"
     }
 }
