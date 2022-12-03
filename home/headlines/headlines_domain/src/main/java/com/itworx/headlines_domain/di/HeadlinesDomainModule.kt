@@ -19,16 +19,4 @@ object HeadlinesDomainModule {
     ): GetArticlesUseCase {
         return GetArticlesUseCase(repository)
     }
-
-    @ViewModelScoped
-    @Provides
-    fun provideArticleUseCase(
-        repository: ArticleRepo
-    ): ArticleUseCases {
-        return ArticleUseCases(
-            saveArticleUseCase = SaveArticleUseCase(repository),
-            deleteArticleUseCase = DeleteArticleUseCase(repository),
-            getSavedArticlesUseCase = GetSavedArticlesUseCase(repository)
-        )
-    }
 }

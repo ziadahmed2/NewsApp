@@ -1,4 +1,4 @@
-package com.itworx.headlines_presentation.webview
+package com.itworx.article_presentation.webview
 
 import android.webkit.WebView
 import android.webkit.WebViewClient

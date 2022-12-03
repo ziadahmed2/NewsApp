@@ -6,7 +6,6 @@ import androidx.paging.cachedIn
 import com.itworx.core_domain.preferences.Preferences
 import com.itworx.headlines_domain.use_cases.GetArticlesUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.flow.MutableStateFlow
 import javax.inject.Inject
 
 @HiltViewModel
@@ -19,7 +18,5 @@ class HeadlinesViewModel @Inject constructor(
         preferences.saveShouldShowOnboarding(false)
     }
 
-    val getArticles = getArticlesUseCase(
-        MutableStateFlow("")
-    ).cachedIn(viewModelScope)
+    val getArticles = getArticlesUseCase().cachedIn(viewModelScope)
 }
