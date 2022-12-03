@@ -9,9 +9,9 @@ import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import coil.annotation.ExperimentalCoilApi
 import com.google.gson.Gson
+import com.itworx.article_presentation.webview.WebViewScreen
+import com.itworx.core_ui.utils.Constants
 import com.itworx.headlines_presentation.headline.HeadlinesScreen
-import com.itworx.headlines_presentation.utils.Constants
-import com.itworx.headlines_presentation.webview.WebViewScreen
 import com.itworx.newsapp.navigation.Route
 import com.itworx.saved_articles_presentation.SavedArticlesScreen
 import com.itworx.search_presentation.SearchScreen
@@ -38,18 +38,16 @@ fun HomeNavGraph(navController: NavHostController) {
                                 Gson().toJson(it),
                                 StandardCharsets.UTF_8.toString()
                             )
-                        }/${true}"
+                        }"
                     )
                 }
             )
         }
 
         composable(
-            route = Route.WEBVIEW + "/{${Constants.PARAM_ARTICLE_OBJECT}}/{${Constants.PARAM_ADD_ARTICLE}}",
+            route = Route.WEBVIEW + "/{${Constants.PARAM_ARTICLE_OBJECT}}",
             arguments = listOf(navArgument(Constants.PARAM_ARTICLE_OBJECT) {
                 type = NavType.StringType
-            }, navArgument(Constants.PARAM_ADD_ARTICLE) {
-                type = NavType.BoolType
             })
         ) {
             WebViewScreen()
@@ -66,7 +64,7 @@ fun HomeNavGraph(navController: NavHostController) {
                                 Gson().toJson(it),
                                 StandardCharsets.UTF_8.toString()
                             )
-                        }/${false}"
+                        }"
                     )
                 }
             )
@@ -82,7 +80,7 @@ fun HomeNavGraph(navController: NavHostController) {
                             Gson().toJson(it),
                             StandardCharsets.UTF_8.toString()
                         )
-                    }/${true}"
+                    }"
                 )
             })
         }

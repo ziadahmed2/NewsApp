@@ -1,4 +1,4 @@
-package com.itworx.headlines_domain.use_cases
+package com.itworx.article_domain.use_cases
 
 data class ArticleUseCases(
     val saveArticleUseCase: SaveArticleUseCase,

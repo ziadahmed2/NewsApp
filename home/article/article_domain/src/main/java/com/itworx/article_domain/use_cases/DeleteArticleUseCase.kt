@@ -1,7 +1,7 @@
-package com.itworx.headlines_domain.use_cases
+package com.itworx.article_domain.use_cases
 
+import com.itworx.article_domain.repo.ArticleRepo
 import com.itworx.core_domain.model.Article
-import com.itworx.headlines_domain.repo.ArticleRepo
 import javax.inject.Inject
 
 

@@ -1,4 +1,4 @@
-package com.itworx.headlines_presentation.webview
+package com.itworx.article_presentation.webview
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -7,12 +7,12 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.google.gson.Gson
+import com.itworx.article_domain.use_cases.ArticleUseCases
 import com.itworx.core.util.UiEvent
 import com.itworx.core_domain.R
 import com.itworx.core_domain.model.Article
 import com.itworx.core_domain.util.UiText
-import com.itworx.headlines_domain.use_cases.ArticleUseCases
-import com.itworx.headlines_presentation.utils.Constants
+import com.itworx.core_ui.utils.Constants
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.launchIn

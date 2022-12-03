@@ -10,6 +10,10 @@ object Modules {
     const val headlinesDomain = ":home:headlines:headlines_domain"
     const val headlinesPresentation = ":home:headlines:headlines_presentation"
 
+    const val articleData = ":home:article:article_data"
+    const val articleDomain = ":home:article:article_domain"
+    const val articlePresentation = ":home:article:article_presentation"
+
     const val searchData = ":home:search:search_data"
     const val searchDomain = ":home:search:search_domain"
     const val searchPresentation = ":home:search:search_presentation"
