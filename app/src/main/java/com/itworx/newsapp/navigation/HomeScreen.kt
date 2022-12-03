@@ -29,8 +29,8 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-import com.itworx.core_ui.domain.model.BottomNavItem
-import com.itworx.headlines_presentation.utils.Constants
+import com.itworx.core_domain.model.BottomNavItem
+import com.itworx.core_ui.utils.Constants
 import com.itworx.newsapp.R
 import com.itworx.newsapp.navigation.nav_graph.HomeNavGraph
 
@@ -39,17 +39,17 @@ fun HomeScreen(navController: NavHostController = rememberNavController()) {
 
     val bottomNavList = listOf(
         BottomNavItem(
-            stringResource(id = com.itworx.core.R.string.news),
+            stringResource(id = com.itworx.core_domain.R.string.news),
             Route.HEADLINES,
             icon = Icons.Default.Home
         ),
         BottomNavItem(
-            stringResource(id = com.itworx.core.R.string.saved),
+            stringResource(id = com.itworx.core_domain.R.string.saved),
             Route.SAVED_ARTICLES,
             icon = Icons.Default.Favorite
         ),
         BottomNavItem(
-            stringResource(id = com.itworx.core.R.string.search),
+            stringResource(id = com.itworx.core_domain.R.string.search),
             Route.SEARCH,
             icon = Icons.Default.Search
         )
@@ -59,7 +59,7 @@ fun HomeScreen(navController: NavHostController = rememberNavController()) {
     val navBackStackEntry by navController.currentBackStackEntryAsState()
 
     when (navBackStackEntry?.destination?.route) {
-        Route.WEBVIEW + "/{${Constants.PARAM_ARTICLE_OBJECT}}/{${Constants.PARAM_ADD_ARTICLE}}" -> {
+        Route.WEBVIEW + "/{${Constants.PARAM_ARTICLE_OBJECT}}" -> {
             bottomBarState.value = false
         }
         else -> {

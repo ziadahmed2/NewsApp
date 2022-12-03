@@ -13,22 +13,29 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/buildSrc" />
             <option value="$PROJECT_DIR$/core" />
-            <option value="$PROJECT_DIR$/core-ui" />
-            <option value="$PROJECT_DIR$/headlines" />
-            <option value="$PROJECT_DIR$/headlines/headlines_data" />
-            <option value="$PROJECT_DIR$/headlines/headlines_domain" />
-            <option value="$PROJECT_DIR$/headlines/headlines_presentation" />
+            <option value="$PROJECT_DIR$/core/core-data" />
+            <option value="$PROJECT_DIR$/core/core-domain" />
+            <option value="$PROJECT_DIR$/core/core-ui" />
+            <option value="$PROJECT_DIR$/home" />
+            <option value="$PROJECT_DIR$/home/article" />
+            <option value="$PROJECT_DIR$/home/article/article_data" />
+            <option value="$PROJECT_DIR$/home/article/article_domain" />
+            <option value="$PROJECT_DIR$/home/article/article_presentation" />
+            <option value="$PROJECT_DIR$/home/headlines" />
+            <option value="$PROJECT_DIR$/home/headlines/headlines_data" />
+            <option value="$PROJECT_DIR$/home/headlines/headlines_domain" />
+            <option value="$PROJECT_DIR$/home/headlines/headlines_presentation" />
+            <option value="$PROJECT_DIR$/home/saved_articles" />
+            <option value="$PROJECT_DIR$/home/saved_articles/saved_articles_data" />
+            <option value="$PROJECT_DIR$/home/saved_articles/saved_articles_domain" />
+            <option value="$PROJECT_DIR$/home/saved_articles/saved_articles_presentation" />
+            <option value="$PROJECT_DIR$/home/search" />
+            <option value="$PROJECT_DIR$/home/search/search_data" />
+            <option value="$PROJECT_DIR$/home/search/search_domain" />
+            <option value="$PROJECT_DIR$/home/search/search_presentation" />
             <option value="$PROJECT_DIR$/onboarding" />
             <option value="$PROJECT_DIR$/onboarding/onboarding_domain" />
             <option value="$PROJECT_DIR$/onboarding/onboarding_presentation" />
-            <option value="$PROJECT_DIR$/saved_articles" />
-            <option value="$PROJECT_DIR$/saved_articles/saved_articles_data" />
-            <option value="$PROJECT_DIR$/saved_articles/saved_articles_domain" />
-            <option value="$PROJECT_DIR$/saved_articles/saved_articles_presentation" />
-            <option value="$PROJECT_DIR$/search" />
-            <option value="$PROJECT_DIR$/search/search_data" />
-            <option value="$PROJECT_DIR$/search/search_domain" />
-            <option value="$PROJECT_DIR$/search/search_presentation" />
           </set>
         </option>
       </GradleProjectSettings>

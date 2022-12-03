@@ -16,12 +16,12 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
-import com.itworx.core.R
+import com.itworx.core_domain.R
 import com.itworx.core.util.UiEvent
 import com.itworx.core_ui.Dimensions
 import com.itworx.core_ui.LocalSpacing
 import com.itworx.onboarding_domain.model.CountryListItem
-import com.itworx.onboarding_presentation.components.ActionButton
+import com.itworx.core_ui.presentation.components.ActionButton
 
 @Composable
 fun CountryScreen(

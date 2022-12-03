@@ -5,8 +5,8 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.itworx.core.domain.model.Country
-import com.itworx.core.domain.preferences.Preferences
+import com.itworx.core_domain.model.Country
+import com.itworx.core_domain.preferences.Preferences
 import com.itworx.core.util.UiEvent
 import com.itworx.onboarding_domain.model.CountryListItem
 import dagger.hilt.android.lifecycle.HiltViewModel

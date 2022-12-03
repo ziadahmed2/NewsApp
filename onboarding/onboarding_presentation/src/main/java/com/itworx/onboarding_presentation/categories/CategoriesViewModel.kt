@@ -5,10 +5,10 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.itworx.core.R
-import com.itworx.core.domain.preferences.Preferences
+import com.itworx.core_domain.R
+import com.itworx.core_domain.preferences.Preferences
 import com.itworx.core.util.UiEvent
-import com.itworx.core.util.UiText
+import com.itworx.core_domain.util.UiText
 import com.itworx.onboarding_domain.model.CategoryListItem
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.channels.Channel

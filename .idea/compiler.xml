@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <bytecodeTargetLevel target="11" />
+    <bytecodeTargetLevel target="11">
+      <module name="News_App.core-data" target="11" />
+      <module name="News_App.core-domain" target="11" />
+      <module name="News_App.core-ui" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>
